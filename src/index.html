@@ -3,31 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Catálogo Fotográfico</title> <!-- Cambié el título aquí -->
+    <title>Catálogo Fotográfico</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Mi Catálogo Fotográfico</h1> <!-- Cambié el encabezado principal -->
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Galería</a></li>
-                <li><a href="#">Carrito</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Mi Catálogo Fotográfico</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Galería</a></li>
+                    <li><a href="#">Carrito</a></li>
+                    <li><a href="#" class="login-btn">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
+        <section class="hero">
+            <h2>Explora nuestras últimas fotografías</h2>
+            <p>Próximamente: ¡Regístrate para personalizar tu experiencia!</p>
+        </section>
+
         <section class="galeria">
-            <h2>Explora nuestra colección de fotografías</h2> <!-- Cambié el subtítulo -->
-            <div class="grid">
-                <p>Estamos actualizando nuestras colecciones. ¡Pronto tendremos más fotos increíbles para ti!</p> <!-- Agregué un mensaje temporal -->
+            <h2>Últimas Fotos</h2>
+            <div class="slider">
+                <div class="slider-container">
+                    <!-- Las imágenes se generarán dinámicamente desde la base de datos -->
+                </div>
             </div>
         </section>
     </main>
+
     <footer>
         <p>© 2024 Mi Catálogo Fotográfico - Todos los derechos reservados.</p>
     </footer>
+
     <script src="js/app.js"></script>
 </body>
 </html>

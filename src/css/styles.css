@@ -1,46 +1,150 @@
+/* General */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f9f9fc; /* Fondo blanco con un toque azul pastel */
+    color: #333;
 }
 
+/* Header */
 header {
-    background: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+    background: #cce4f6; /* Azul pastel */
+    color: #333;
+    padding: 1rem 0;
 }
 
-nav ul {
+header .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav ul {
     list-style: none;
+    display: flex;
+    margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    margin: 0 1rem;
+header nav ul li {
+    margin-left: 1rem;
 }
 
-nav ul li a {
-    color: white;
+header nav ul li a {
     text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
+header nav ul li a:hover {
+    background: #a4d4f1; /* Azul más oscuro */
 }
 
-footer {
-    text-align: center;
-    background: #333;
+header .login-btn {
+    background: #a4d4f1; /* Azul más oscuro */
     color: white;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
+    border: none;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background: #eaf5fc; /* Fondo muy suave */
+}
+
+/* Galería */
+.galeria {
+    text-align: center;
+    padding: 2rem;
+}
+
+.galeria .slider {
+    overflow: hidden;
+    max-width: 90%;
+    margin: auto;
+}
+
+.galeria .slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.galeria .slider-container img {
+    width: 20%; /* 5 imágenes en pantalla */
+    margin: 0.5rem;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: #cce4f6; /* Azul pastel */
+    color: #333;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Estilos para la página de registro */
+.registro {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9fc; /* Fondo pastel */
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registro h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
     width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button.btn {
+    background-color: #a4d4f1;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button.btn:hover {
+    background-color: #86c5e3;
 }
