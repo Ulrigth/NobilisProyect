@@ -148,3 +148,26 @@ button.btn {
 button.btn:hover {
     background-color: #86c5e3;
 }
+
+/* Mensajes de estado */
+.status-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.status-message.success {
+    color: #4CAF50; /* Verde para éxito */
+    background: #e8f5e9;
+    border: 1px solid #4CAF50;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.status-message.error {
+    color: #F44336; /* Rojo para errores */
+    background: #ffebee;
+    border: 1px solid #F44336;
+    padding: 0.5rem;
+    border-radius: 5px;
+}

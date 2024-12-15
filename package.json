@@ -1,0 +1,18 @@
+{
+    "name": "nobilisproyect",
+    "version": "1.0.0",
+    "description": "Proyecto Nobilis",
+    "main": "src/index.html",
+    "scripts": {
+      "start": "node src/app.js",
+      "build": "echo 'No build script defined.'"
+    },
+    "dependencies": {
+      "@supabase/supabase-js": "^2.0.0"
+    },
+    "devDependencies": {},
+    "keywords": [],
+    "author": "TuNombre",
+    "license": "ISC"
+  }
+  

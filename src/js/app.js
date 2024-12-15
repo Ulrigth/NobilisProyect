@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
 
 // Configuración de Supabase
-const SUPABASE_URL = 'https://tu-url.supabase.co'; // Reemplaza con tu URL
-const SUPABASE_KEY = 'tu-clave-anon-publica'; // Reemplaza con tu clave pública
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_KEY = process.env.SUPABASE_KEY;
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // Función para cargar las últimas 10 fotos
