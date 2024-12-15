@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import bcrypt from 'bcryptjs';
 
 // Configuración de Supabase
 const SUPABASE_URL = 'https://scklqyvjkvrhwomxnjwl.supabase.c';
@@ -25,6 +26,13 @@ async function escribirLog(mensaje) {
     }
 }
 
+// Hashear la contraseña antes de enviarla a Supabase
+async function hashPassword(plainPassword) {
+    const salt = await bcrypt.genSalt(10);
+    const hash = await bcrypt.hash(plainPassword, salt);
+    return hash;
+}
+
 // Función para manejar el registro
 document.getElementById('register-form').addEventListener('submit', async (event) => {
     event.preventDefault(); // Evita recargar la página
@@ -35,6 +43,7 @@ document.getElementById('register-form').addEventListener('submit', async (event
     const correo = document.getElementById('correo').value;
     const usuario = document.getElementById('usuario').value;
     const clave = document.getElementById('clave').value;
+    const hashedPassword = await hashPassword(clave);
 
     // Registrar el inicio del proceso en los logs
     await escribirLog(`Inicio del registro para: ${correo}`);
@@ -47,7 +56,7 @@ document.getElementById('register-form').addEventListener('submit', async (event
                 apellido,
                 email: correo,
                 usuario,
-                password_hash: clave // Cambiar por hash si lo usas
+                password_hash: hashedPassword
             }
         ]);
 
