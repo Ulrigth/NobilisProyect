@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Catálogo Fotográfico</title>
+    <title>Catálogo - Mi Catálogo Fotográfico</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Mi Catálogo Fotográfico</h1>
+            <h1>Catálogo de Temas</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="register.html">Registro</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html" class="active">Catálogo</a></li>
                     <li><a href="login.html">Iniciar Sesión</a></li>
                 </ul>
             </nav>
@@ -21,15 +21,18 @@
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Bienvenido a tu catálogo de fotografías</h2>
-            <p>Explora, comparte y gestiona tus recuerdos en un solo lugar.</p>
-            <a href="register.html" class="btn">Regístrate ahora</a>
+        <section class="catalogo">
+            <h2>Explora los Temas</h2>
+            <div class="temas-container">
+                <!-- Los temas se agregarán dinámicamente con JavaScript -->
+            </div>
         </section>
     </main>
 
     <footer>
         <p>© 2024 Mi Catálogo Fotográfico - Todos los derechos reservados.</p>
     </footer>
+
+    <script src="js/catalogo.js" type="module"></script>
 </body>
 </html>

@@ -3,24 +3,27 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9fc; /* Fondo blanco con un toque azul pastel */
+    background-color: #f9f9fc; /* Fondo pastel */
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Header */
 header {
     background: #cce4f6; /* Azul pastel */
     color: #333;
     padding: 1rem 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 90%;
     max-width: 1200px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
@@ -48,82 +51,43 @@ header nav ul li a {
     transition: background 0.3s;
 }
 
-header nav ul li a:hover {
-    background: #a4d4f1; /* Azul más oscuro */
-}
-
-header .login-btn {
+header nav ul li a:hover,
+header nav ul li a.active {
     background: #a4d4f1; /* Azul más oscuro */
     color: white;
-    border: none;
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 2rem;
-    background: #eaf5fc; /* Fondo muy suave */
-}
-
-/* Galería */
-.galeria {
-    text-align: center;
-    padding: 2rem;
-}
-
-.galeria .slider {
-    overflow: hidden;
-    max-width: 90%;
-    margin: auto;
-}
-
-.galeria .slider-container {
+/* Main content */
+main {
+    flex: 1;
     display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.galeria .slider-container img {
-    width: 20%; /* 5 imágenes en pantalla */
-    margin: 0.5rem;
-    border-radius: 10px;
-}
-
-/* Footer */
-footer {
-    background: #cce4f6; /* Azul pastel */
-    color: #333;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-/* Estilos para la página de registro */
-.registro {
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
-    background-color: #f9f9fc; /* Fondo pastel */
-    margin: 2rem auto;
-    width: 90%;
-    max-width: 400px;
-    border: 1px solid #ddd;
+}
+
+/* Form Section */
+.form-section {
+    background: white;
+    padding: 2rem;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
 }
 
-.registro h2 {
+.form-section h2 {
     margin-bottom: 1.5rem;
-    color: #333;
 }
 
 .form-group {
     margin-bottom: 1rem;
-    text-align: left;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
-    color: #555;
 }
 
 .form-group input {
@@ -131,64 +95,113 @@ footer {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
 }
 
-button.btn {
-    background-color: #a4d4f1;
+button.btn,
+a.btn {
+    background: #a4d4f1;
     color: white;
     border: none;
     padding: 0.7rem 1.5rem;
     border-radius: 5px;
     font-size: 1rem;
+    text-align: center;
     cursor: pointer;
-    transition: background 0.3s;
+    display: inline-block;
+    text-decoration: none;
 }
 
-button.btn:hover {
-    background-color: #86c5e3;
+button.btn:hover,
+a.btn:hover {
+    background: #86c5e3;
 }
 
-/* Mensajes de estado */
-.status-message {
-    margin-top: 1rem;
-    font-size: 1rem;
+/* Footer */
+footer {
+    background: #cce4f6;
     text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
 }
 
-.status-message.success {
-    color: #4CAF50; /* Verde para éxito */
-    background: #e8f5e9;
-    border: 1px solid #4CAF50;
-    padding: 0.5rem;
-    border-radius: 5px;
+/* Contenedor del usuario */
+.user-info {
+    display: inline-block;
+    margin-right: 1rem; /* Espaciado entre el nombre y los enlaces del menú */
+    font-weight: bold;
+    color: #333;
 }
 
-.status-message.error {
-    color: #F44336; /* Rojo para errores */
-    background: #ffebee;
-    border: 1px solid #F44336;
-    padding: 0.5rem;
-    border-radius: 5px;
-}
-
-/* Mensajes de estado */
-.status-message {
-    margin-top: 1rem;
-    font-size: 1rem;
+/* Galería de imágenes */
+.gallery {
     text-align: center;
-    padding: 0.5rem;
-    border-radius: 5px;
+    padding: 2rem;
+    background-color: #f9f9fc;
 }
 
-.status-message.success {
-    color: #4CAF50; /* Verde para éxito */
-    background: #e8f5e9;
-    border: 1px solid #4CAF50;
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.status-message.error {
-    color: #F44336; /* Rojo para errores */
-    background: #ffebee;
-    border: 1px solid #F44336;
+.image-container img {
+    width: 18%; /* Ajusta el tamaño de cada imagen */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos del catálogo */
+.catalogo {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9fc;
+}
+
+.temas-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tema {
+    width: 200px;
+    height: 200px; /* Establecer tamaño fijo para el contenedor */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Asegura que el contenido no se salga del contenedor */
+    border-radius: 10px; /* Bordes redondeados para un diseño moderno */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Fondo blanco para las tarjetas */
+}
+
+.tema img {
+    width: 100%; /* Ajustar al ancho del contenedor */
+    height: 100%; /* Ajustar al alto del contenedor */
+    object-fit: cover; /* Recorta la imagen para que siempre llene el contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.tema:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el cursor */
+}
+
+.tema h3 {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+

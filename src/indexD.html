@@ -12,24 +12,28 @@
             <h1>Mi Catálogo Fotográfico</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="register.html">Registro</a></li>
-                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li id="user-info" class="user-info"></li>
+                    <li><a href="indexD.html" class="active">Inicio</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Bienvenido a tu catálogo de fotografías</h2>
-            <p>Explora, comparte y gestiona tus recuerdos en un solo lugar.</p>
-            <a href="register.html" class="btn">Regístrate ahora</a>
+        <section class="gallery">
+            <h2>Últimas Fotos</h2>
+            <div id="image-container" class="image-container">
+                <!-- Las imágenes se cargarán aquí dinámicamente -->
+            </div>
         </section>
     </main>
 
     <footer>
         <p>© 2024 Mi Catálogo Fotográfico - Todos los derechos reservados.</p>
     </footer>
+
+    <script src="js/gallery.js" type="module"></script>
 </body>
 </html>

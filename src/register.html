@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - Mi Catálogo Fotográfico</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -14,13 +14,14 @@
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="register.html" class="active">Registro</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="registro">
+        <section class="form-section">
             <h2>Crear una cuenta</h2>
             <form id="register-form">
                 <div class="form-group">
@@ -32,7 +33,7 @@
                     <input type="text" id="apellido" name="apellido" required>
                 </div>
                 <div class="form-group">
-                    <label for="correo">Correo electrónico:</label>
+                    <label for="correo">Correo Electrónico:</label>
                     <input type="email" id="correo" name="correo" required>
                 </div>
                 <div class="form-group">
@@ -45,17 +46,16 @@
                 </div>
                 <button type="submit" class="btn">Registrarse</button>
             </form>
-            
-            <!-- Contenedor para el mensaje de estado -->
-            <div id="register-status" class="status-message"></div>           
+            <div style="margin-top: 20px;">
+                <a href="index.html" class="btn">Volver a la página principal</a>
+            </div>
+            <div id="register-status" class="status-message"></div>
         </section>
     </main>
 
     <footer>
         <p>© 2024 Mi Catálogo Fotográfico - Todos los derechos reservados.</p>
     </footer>
-
-    <script type="module" src="js/register.js"></script>
-
+    <script src="js/register.js" type="module"></script>
 </body>
 </html>
