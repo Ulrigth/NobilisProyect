@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 
 // Configuración de Supabase
-const SUPABASE_URL = 'https://scklqyvjkvrhwomxnjwl.supabase.c';
+const SUPABASE_URL = 'https://scklqyvjkvrhwomxnjwl.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNja2xxeXZqa3ZyaHdvbXhuandsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQyMTM2OTQsImV4cCI6MjA0OTc4OTY5NH0.YIGhkfe0-GYuAHyvbdAAdwoycq7383-dS97LXzTaNOM';
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
